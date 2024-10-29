@@ -1,10 +1,12 @@
-import BookForm from "../components/BookForm";
-import BookList from "../components/BookList";
+// import BookList from "../components/BookList";
+import ProductList from "../components/ProductList.jsx";
 
 const CounterPage = () => {
   return (
     <div>
-      <BookList />
+      {/* <BookList /> */}
+
+      <ProductList />
     </div>
   );
 };
