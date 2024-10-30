@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createProduct, deleteProduct, fetchProducts, updateProduct } from "../app/state/productsSlice";
 import AddProduct from "./AddProduct";
+import { nanoid } from "nanoid";
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const ProductList = () => {
   }, [dispatch]);
 
   const handleAdd = (product) => {
-    dispatch(createProduct({ ...product, id: new Date().getTime() }));
+    dispatch(createProduct({ ...product, id: nanoid() }));
   };
 
   const handleEdit = (product) => {
